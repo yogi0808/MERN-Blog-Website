@@ -27,6 +27,7 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
   - React
   - Redux
   - React Router
+  - Tailwind CSS
 
 - **Backend:**
 
