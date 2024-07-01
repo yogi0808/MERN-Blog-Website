@@ -9,8 +9,6 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -46,8 +44,8 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/yogi0808/MERN-Blog-Website.git
+   cd MERN-Blog-Website
    ```
 
 2. Install dependencies for both client and server:
@@ -66,7 +64,7 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 
    ```env
    PORT=5000
-   MONGO_URI=your_mongo_db_connection_string
+   DB_URI=your_mongo_db_connection_string
    JWT_SECRET=your_jwt_secret
    ```
 
@@ -79,7 +77,7 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 
    # Start the frontend server
    cd ../client
-   npm start
+   npm run dev
    ```
 
 ## Usage
@@ -92,15 +90,3 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 
 ![Screenshot1](path/to/screenshot1.png)
 ![Screenshot2](path/to/screenshot2.png)
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/feature-name`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/feature-name`)
-5. Open a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
