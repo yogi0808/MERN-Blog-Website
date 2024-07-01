@@ -88,5 +88,7 @@ This is a full-stack blog website built using React, Node.js, Express, MongoDB, 
 
 ## Screenshots
 
-![Screenshot1](path/to/screenshot1.png)
-![Screenshot2](path/to/screenshot2.png)
+![Home Page](https://github.com/yogi0808/MERN-Blog-Website/assets/148646093/90e52e2c-2e26-4bca-9f93-fc16f42bc8f0)
+![Blog Page](https://github.com/yogi0808/MERN-Blog-Website/assets/148646093/483e55a6-0ae2-4739-9117-058871af4e71)
+![Single Blog Page](https://github.com/yogi0808/MERN-Blog-Website/assets/148646093/d12b11eb-5a72-45a8-81b7-58164de58f45)
+![Profile Page](https://github.com/yogi0808/MERN-Blog-Website/assets/148646093/b9516ef3-a6f9-4e83-ab8b-4392505b225d)

@@ -92,21 +92,25 @@ const SingleBlog = () => {
         </div>
         <p className="text-tsoft">{blog.desc}</p>
       </div>
-      {blog.user === userInfo._id.toString() || userInfo.isAdmin ? (
-        <>
-          <Link
-            to={`/editblog/${blog.slug}`}
-            className="text-nowrap rounded-full border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black font-semibold hover:dark:bg-white hover:bg-[#121212] hover:dark:text-black hover:text-white fixed bottom-28 right-5 sm:right-10 transition-all duration-200 ease-out dark:bg-[#121212] bg-white"
-          >
-            Edit
-          </Link>
-          <button
-            onClick={deleteBlog}
-            className="text-nowrap rounded-full border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black font-semibold hover:dark:bg-white hover:bg-[#121212] hover:dark:text-black hover:text-white fixed bottom-12 right-5 sm:right-10 transition-all duration-200 ease-out dark:bg-[#121212] bg-white"
-          >
-            Delete
-          </button>
-        </>
+      {userInfo ? (
+        blog.user === userInfo._id.toString() || userInfo.isAdmin ? (
+          <>
+            <Link
+              to={`/editblog/${blog.slug}`}
+              className="text-nowrap rounded-full border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black font-semibold hover:dark:bg-white hover:bg-[#121212] hover:dark:text-black hover:text-white fixed bottom-28 right-5 sm:right-10 transition-all duration-200 ease-out dark:bg-[#121212] bg-white"
+            >
+              Edit
+            </Link>
+            <button
+              onClick={deleteBlog}
+              className="text-nowrap rounded-full border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black font-semibold hover:dark:bg-white hover:bg-[#121212] hover:dark:text-black hover:text-white fixed bottom-12 right-5 sm:right-10 transition-all duration-200 ease-out dark:bg-[#121212] bg-white"
+            >
+              Delete
+            </button>
+          </>
+        ) : (
+          ""
+        )
       ) : (
         ""
       )}
