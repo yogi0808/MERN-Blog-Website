@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router"
 import { convertToBase64, makeSlug } from "../helper"
 import { toast } from "react-toastify"
+import Input from "../components/Input"
+import Button from "../components/Button"
 
 const EditBlog = () => {
   const { slug } = useParams()
@@ -86,7 +88,7 @@ const EditBlog = () => {
         onSubmit={handelSubmit}
         className="flex flex-col gap-4 sm:gap-6 w-full max-w-[550px]"
       >
-        <input
+        <Input
           type="text"
           name="title"
           placeholder="Enter your Title."
@@ -94,7 +96,7 @@ const EditBlog = () => {
           value={blog.title}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="file"
           name="image"
           accept="image/*"
@@ -111,12 +113,11 @@ const EditBlog = () => {
           value={blog.desc}
           onChange={handelOnChange}
         />
-        <button
-          className={`rounded-sm relative border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black after:content-[''] after:w-full after:absolute after:bottom-0 after:left-0 after:h-0 hover:after:h-full after:bg-[#121212] after:dark:bg-white hover:dark:text-black hover:text-white after:transition-all after:duration-300 after:ease-out after:-z-10 font-semibold disabled:bg-zinc-500 disabled:border-none disabled:text-black disabled:cursor-not-allowed`}
-          disabled={!blog.title || !blog.desc || !base64Image ? true : false}
+        <Button
+          disable={!blog.title || !blog.desc || !base64Image ? true : false}
         >
           Submit
-        </button>
+        </Button>
       </form>
     </main>
   )

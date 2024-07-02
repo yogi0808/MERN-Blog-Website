@@ -3,6 +3,8 @@ import { toast } from "react-toastify"
 import { useNavigate } from "react-router"
 import { convertToBase64 } from "../helper"
 import { Link } from "react-router-dom"
+import Input from "../components/Input"
+import Button from "../components/Button"
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -75,57 +77,50 @@ const Register = () => {
         onSubmit={handelSubmit}
         className="flex flex-col gap-4 sm:gap-6 w-full max-w-[550px]"
       >
-        <input
+        <Input
           type="text"
           name="name"
           placeholder="Enter your Name."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.name}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="text"
           name="username"
           placeholder="Enter your Username."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.username}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="email"
           name="email"
           placeholder="Enter your Email."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.email}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="file"
           name="image"
           accept="image/*"
           placeholder="Enter your image."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           onChange={handleFileChange}
         />
-        <input
+        <Input
           type="password"
           name="password"
           placeholder="Enter your Password."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.password}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="password"
           name="cPassword"
           placeholder="Re-Enter your Password."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={cPassword}
           onChange={(e) => setCPassword(e.target.value)}
         />
-        <button
-          className={`rounded-sm relative border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black after:content-[''] after:w-full after:absolute after:bottom-0 after:left-0 after:h-0 hover:after:h-full after:bg-[#121212] after:dark:bg-white hover:dark:text-black hover:text-white after:transition-all after:duration-300 after:ease-out after:-z-10 font-semibold disabled:bg-zinc-500 disabled:border-none disabled:text-black disabled:cursor-not-allowed`}
-          disabled={
+        <Button
+          disable={
             !user.name ||
             !user.username ||
             !user.email ||
@@ -136,7 +131,7 @@ const Register = () => {
           }
         >
           Submit
-        </button>
+        </Button>
         <p className="text-balance font-medium">
           Already Have an Account{" "}
           <Link

@@ -4,6 +4,8 @@ import { toast } from "react-toastify"
 import { useDispatch } from "react-redux"
 import { login } from "../app/features/auth/authSlice"
 import { Link } from "react-router-dom"
+import Input from "../components/Input"
+import Button from "../components/Button"
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -56,28 +58,23 @@ const Login = () => {
         onSubmit={handelSubmit}
         className="flex flex-col gap-4 sm:gap-6 w-full max-w-[550px]"
       >
-        <input
-          type="text"
+        <Input
+          type="email"
           name="email"
           placeholder="Enter your Email."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.email}
           onChange={handelOnChange}
         />
-        <input
+        <Input
           type="password"
           name="password"
           placeholder="Enter your Password."
-          className="dark:bg-zinc-700 bg-zinc-200 px-4 py-2 rounded-sm"
           value={user.password}
           onChange={handelOnChange}
         />
-        <button
-          className={`rounded-sm relative border bg-transparent px-4 py-2 text-lg overflow-hidden tracking-wide dark:border-white border-black after:content-[''] after:w-full after:absolute after:bottom-0 after:left-0 after:h-0 hover:after:h-full after:bg-[#121212] after:dark:bg-white hover:dark:text-black hover:text-white after:transition-all after:duration-300 after:ease-out after:-z-10 font-semibold disabled:bg-zinc-500 disabled:border-none disabled:text-black disabled:cursor-not-allowed`}
-          disabled={!user.email || !user.password ? true : false}
-        >
+        <Button disable={!user.email || !user.password ? true : false}>
           Submit
-        </button>
+        </Button>
         <p className="text-balance font-medium">
           Don't Have an Account{" "}
           <Link
