@@ -92,8 +92,8 @@ const SingleBlog = () => {
         </div>
         <p className="text-tsoft">{blog.desc}</p>
       </div>
-      {userInfo ? (
-        blog.user === userInfo._id.toString() || userInfo.isAdmin ? (
+      {userInfo &&
+        (blog.user === userInfo._id.toString() || userInfo.isAdmin) && (
           <>
             <Link
               to={`/editblog/${blog.slug}`}
@@ -108,12 +108,7 @@ const SingleBlog = () => {
               Delete
             </button>
           </>
-        ) : (
-          ""
-        )
-      ) : (
-        ""
-      )}
+        )}
     </main>
   )
 }
